@@ -1,0 +1,64 @@
+[user]
+	name = Stephane Leclercq
+	email = leclercq@ekino.com
+[color]
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'
+	co = checkout
+[core]
+        #pager = cat
+        pager = diff-so-fancy | less --tabs=4 -RFX
+        #
+        # Out of luck: on Windows w/o msysGit? You may have Notepad++…
+        # editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+        # 
+        # If you want to use Sublime Text 2's subl wrapper:
+        # editor = subl -w
+        # 
+#        whitespace = -trailing-space
+#        whitespace = tab-in-indent
+	autocrlf = input
+	excludesfile = /Users/sleclercq/.gitignore_global
+#        safecrlf = true
+[diff]
+        mnemonicPrefix = true
+        wordRegex = .
+        renameLimit = 10000
+[fetch]
+        recurseSubmodules = on-demand
+        prune = true
+[grep]
+        extendedRegexp = true
+[log]
+        abbrevCommit = true
+[merge]
+        conflictStyle = diff3
+	tool = meld
+[rebase]
+        autoStash = true
+[mergetool]
+        keepBackup = false
+        keepTemporaries = false
+        prompt = false
+[pull]
+        rebase = true
+[push]
+        default = simple
+[rerere]
+        # If, like me, you like rerere, decomment these
+        autoupdate = true
+        enabled = true
+[status]
+        submoduleSummary = true
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = cache --timeout=999999

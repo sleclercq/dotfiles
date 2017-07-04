@@ -3,13 +3,13 @@
 # Inspired by http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/ https://github.com/michaeljsmalley/dotfiles/blob/master/makesymlinks.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
-# Things to think about : Homebrew, tmux, gitconfig, osx prefs
+# Things to think about : Homebrew, tmux, osx prefs
 
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim zshrc gitattributes gitconfig gitignore_global"    # list of files/folders to symlink in homedir
 
 ##########
 
