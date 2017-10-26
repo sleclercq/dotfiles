@@ -61,7 +61,6 @@ export JAVA_OPTS="-Xmx1024m -Djava.security.egd=file:/dev/./urandom"
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 export PATH=$JAVA_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH="$HOME/.jenv/bin:$PATH"
 
 export EDITOR=vim
 
@@ -69,7 +68,6 @@ alias pullover="git stash save -u 'for pull' && git pull && git stash pop --inde
 alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
 alias meteo='curl -4 http://wttr.in/Paris'
 
-#eval "$(jenv init -)"
 
 # go into tmux
 #if [[ "$TERM" != "screen-256color" ]] then
