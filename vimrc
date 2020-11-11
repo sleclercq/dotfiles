@@ -49,7 +49,7 @@ Plugin 'rking/ag.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic' seems to mess with .sh scripts first line
 Plugin 'slim-template/vim-slim'
 Plugin 'slm-lang/vim-slm'
 Plugin 'tomasr/molokai'
@@ -58,7 +58,9 @@ Plugin 'tpope/vim-liquid'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" For some reason powerline doesn't work anymore in macos mojave (issue with
+" python signage)
+" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/bufkill.vim'
@@ -67,7 +69,10 @@ Plugin 'wavded/vim-stylus'
 Plugin 'wizicer/vim-jison'
 " Plugins I added after this very long list of stuff
 Plugin 'mhinz/vim-startify'
-Plugin 'takac/vim-hardtime'
+" Plugin 'takac/vim-hardtime' when not using vim often (which is the case
+" right now) this plugin only makes me want to switch to sublimetext
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'ryanoasis/vim-devicons' " Load after : NERDTree | vim-airline | CtrlP | powerline | Denite | unite | lightline.vim | vim-startify | vimfiler | flagship
 
 
@@ -134,15 +139,16 @@ noremap <Right> <NOP>
 :nmap <C-n> :bnext<CR>
 :nmap <C-b> :bprev<CR>
 
-" Syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Syntastic recommended settings (disabled, plugin messes with shell scripts
+" first line)
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " TODO configure Ctrl-P
 
@@ -165,5 +171,11 @@ set encoding=utf8
 
 " Powerline configuration
 set laststatus=2
+
+" YouCompleteMe configuration
+" let g:EclimCompletionMethod = 'omnifunc'
+
+" Javacomplete2 configuration
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 
