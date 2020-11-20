@@ -62,9 +62,6 @@ autoload -U bashcompinit && bashcompinit
 
 [ -f ${PATH_MY_AWS_CLI}/completion/_my-aws-cli ] && source ${PATH_MY_AWS_CLI}/completion/_my-aws-cli
 
-# Pyenv
-eval "$(pyenv init -)"
-
 # Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
