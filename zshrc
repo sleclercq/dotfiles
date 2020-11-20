@@ -28,7 +28,11 @@ export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 # Ensure user-installed binaries take precedence
 export PATH=$JAVA_HOME/bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
-export EDITOR=vim
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="\vim"
+alias vimdiff='nvim -d'
+export EDITOR=nvim
 
 alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
 
