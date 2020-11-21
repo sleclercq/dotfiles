@@ -12,85 +12,65 @@ endif
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " colors
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jnurmine/Zenburn'
-Plugin 'blueshirts/darcula'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jnurmine/Zenburn'
+Plug 'blueshirts/darcula'
 
 " misc / don't know
-Plugin 'StanAngeloff/php.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'alunny/pegjs-vim'
-Plugin 'ap/vim-css-color'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'docunext/closetag.vim'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'elzr/vim-json'
-Plugin 'ervandew/supertab'
-Plugin 'groenewege/vim-less'
-Plugin 'junegunn/goyo.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'lesliev/vim-inform7'
-Plugin 'majutsushi/tagbar'
-Plugin 'mtscout6/vim-cjsx'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rking/ag.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/syntastic' seems to mess with .sh scripts first line
-Plugin 'slim-template/vim-slim'
-Plugin 'slm-lang/vim-slm'
-Plugin 'tomasr/molokai'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-liquid'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-surround'
+Plug 'StanAngeloff/php.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'alunny/pegjs-vim'
+Plug 'ap/vim-css-color'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'digitaltoad/vim-jade'
+Plug 'docunext/closetag.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
+Plug 'groenewege/vim-less'
+Plug 'junegunn/goyo.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'lesliev/vim-inform7'
+Plug 'majutsushi/tagbar'
+Plug 'mtscout6/vim-cjsx'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'rking/ag.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/syntastic' seems to mess with .sh scripts first line
+Plug 'slim-template/vim-slim'
+Plug 'slm-lang/vim-slm'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
 " For some reason powerline doesn't work anymore in macos mojave (issue with
 " python signage)
-" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/bufkill.vim'
-Plugin 'vim-scripts/oceandeep'
-Plugin 'wavded/vim-stylus'
-Plugin 'wizicer/vim-jison'
-" Plugins I added after this very long list of stuff
-Plugin 'mhinz/vim-startify'
-" Plugin 'takac/vim-hardtime' when not using vim often (which is the case
+" Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/bufkill.vim'
+Plug 'vim-scripts/oceandeep'
+Plug 'wavded/vim-stylus'
+Plug 'wizicer/vim-jison'
+" Plugs I added after this very long list of stuff
+Plug 'mhinz/vim-startify'
+" Plug 'takac/vim-hardtime' when not using vim often (which is the case
 " right now) this plugin only makes me want to switch to sublimetext
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'artur-shaik/vim-javacomplete2'
-Plugin 'ryanoasis/vim-devicons' " Load after : NERDTree | vim-airline | CtrlP | powerline | Denite | unite | lightline.vim | vim-startify | vimfiler | flagship
+" Plug 'Valloric/YouCompleteMe'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'ryanoasis/vim-devicons' " Load after : NERDTree | vim-airline | CtrlP | powerline | Denite | unite | lightline.vim | vim-startify | vimfiler | flagship
 
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-" End of Vundle plugin configuration
 
 set autoindent
 set expandtab
