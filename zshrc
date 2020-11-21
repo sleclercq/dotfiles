@@ -103,6 +103,7 @@ zinit snippet OMZP::pipenv
 zinit snippet OMZP::pyenv
 # zinit snippet OMZP::sdk Doesn't load sdkman automatically
 zinit snippet OMZP::virtualenv
+zinit light zsh-users/zsh-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
