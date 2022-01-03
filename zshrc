@@ -10,8 +10,6 @@ export CLICOLOR=1
 
 # Nodejs
 export NODE_ENV=development
-#export NODE_ENV=production
-
 
 # Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
@@ -20,19 +18,11 @@ export PATH=$PATH:$GOPATH/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+export EDITOR=vi
 
-export JAVA_OPTS="-Xmx1024m -Djava.security.egd=file:/dev/./urandom"
+export JAVA_OPTS="-Xmx4096m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=512m"
 
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
-
-# Ensure user-installed binaries take precedence
-export PATH=$JAVA_HOME/bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
-
-alias vim="nvim"
-alias vi="nvim"
-alias oldvim="\vim"
-alias vimdiff='nvim -d'
-export EDITOR=nvim
 
 alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
 
@@ -66,8 +56,6 @@ autoload -U bashcompinit && bashcompinit
 
 [ -f ${PATH_MY_AWS_CLI}/completion/_my-aws-cli ] && source ${PATH_MY_AWS_CLI}/completion/_my-aws-cli
 
-# Poetry
-export PATH="$HOME/.poetry/bin:$PATH"
 
 
 ### Added by Zinit's installer
@@ -107,3 +95,11 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Google cloud
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+eval "$(pyenv virtualenv-init -)"
+
+
